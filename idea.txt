@@ -1,0 +1,9 @@
+data copy & deduplication
+possibly C or Python? MUST BE EFFICIENT
+
+LIGHT DATABASE on docker?
+
+1. copy -> DATABASE
+2. copy -> retention
+3. chunks? data hash?
+4. deduplication

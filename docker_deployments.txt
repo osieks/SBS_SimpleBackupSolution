@@ -1,0 +1,11 @@
+DB
+    docker pull postgres
+    docker volume create postgres_data
+    docker run --name postgres_container -e POSTGRES_PASSWORD=SuperSecret -d -p 5432:5432 -v postgres_data:/var/lib/postgresql/data postgres  --restart=always
+
+PGADMIN
+    docker pull dpage/pgadmin4
+    docker run -p 80:80 -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' -d dpage/pgadmin4  --restart=always
+
+PORTAINER
+    docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:2.19.4

@@ -6,4 +6,6 @@ LIGHT DATABASE on docker?
 1. copy -> DATABASE
 2. copy -> retention
 3. chunks? data hash? first last modified
-4. deduplication
+4. deduplication - on files for now
+
+5. add ui, plans, schedules

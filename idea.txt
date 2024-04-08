@@ -5,5 +5,5 @@ LIGHT DATABASE on docker?
 
 1. copy -> DATABASE
 2. copy -> retention
-3. chunks? data hash?
+3. chunks? data hash? first last modified
 4. deduplication

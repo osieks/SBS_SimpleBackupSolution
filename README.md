@@ -36,6 +36,6 @@ delete_expired_files(log
 
 ## Dependencies
 
-Python 3
-psycopg2
+1. `Python 3`
+2. `psycopg2`
 

@@ -26,7 +26,7 @@ from backup_files import backup_files
 
 source = 'E:/Source_folder/'
 destination = 'E:/Backup_folder/'
-log = 'E:\Backup_folder\Logs'
+log = 'E:/Backup_folder/Logs'
 retainion_days = 7
 
 backup_directory = destination+datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S")+"/"

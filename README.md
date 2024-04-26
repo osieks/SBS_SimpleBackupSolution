@@ -31,7 +31,7 @@ log = 'E:\Backup_folder\Logs'
 # Usage
 backup_files(source, destination+datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S")+"/", log, 7)
 delete_empty_folders(destination,log)
-delete_expired_files(log
+delete_expired_files(log)
 ```
 
 ## Dependencies

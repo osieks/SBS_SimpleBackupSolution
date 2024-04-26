@@ -27,9 +27,12 @@ from backup_files import backup_files
 source = 'E:/Source_folder/'
 destination = 'E:/Backup_folder/'
 log = 'E:\Backup_folder\Logs'
+retainion_days = 7
+
+backup_directory = destination+datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S")+"/"
 
 # Usage
-backup_files(source, destination+datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S")+"/", log, 7)
+backup_files(source,backup_directory , log, retainion_days)
 delete_empty_folders(destination,log)
 delete_expired_files(log)
 ```

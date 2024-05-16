@@ -1,7 +1,7 @@
 DB
     docker pull postgres
     docker volume create postgres_data
-    docker run --name postgres_container -e POSTGRES_PASSWORD=SuperSecret -d -p 5432:5432 -v postgres_data:/var/lib/postgresql/data postgres  --restart=always
+    docker run --name postgres_container -e POSTGRES_PASSWORD=SuperSecret -d -p 5432:5432 -v postgres_data:/var/lib/postgresql/data --restart=always postgres
 
 PGADMIN
     docker pull dpage/pgadmin4

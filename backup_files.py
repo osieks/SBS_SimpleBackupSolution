@@ -84,3 +84,12 @@ def backup_files(src_dir, dest_dir,log_dir, retention_days):
     with open(log_dir+"\\log_"+datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S")+".txt", "w") as text_file:
         text_file.write(log)
     
+
+
+
+if __name__ == "__main__":
+    source = 'D:/Source_folder/'
+    destination = 'D:/Backup_folder/'
+    log = 'D:\Backup_folder\Logs'
+    # Usage
+    backup_files(source, destination+datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S")+"/", log, 7)

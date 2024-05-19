@@ -1,10 +1,10 @@
 import datetime
 
-from delete_expired_files import delete_expired_files
-from delete_empty_folders import delete_empty_folders
-from backup_files import backup_files 
+import delete_expired_files
+import delete_empty_folders
+import backup_files 
 import backup_containers
-from backup_containers import backup_postgres_db_from_pg_containers
+import backup_postgres_db_from_pg_containers
 
 source_directories = ['D:/Source_folder/',"E:/123_Projekty/"]
 dest_dir = 'D:/Backup_folder/'

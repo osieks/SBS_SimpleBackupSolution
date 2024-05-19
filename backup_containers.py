@@ -2,7 +2,7 @@ import subprocess
 import datetime
 
 
-def backup_containers(destination,log_dir):
+def backup_containers(destination,log_file):
     debug = 1
     log = ""
     #docker import img.tar my-new-image:latest
@@ -21,10 +21,11 @@ def backup_containers(destination,log_dir):
             print(f"docker export --output {destination}\{container_name}.tar {container_name}")
             print(output)
         
-        log = log + output 
-        log = log + f"exported {container_name}" 
-    with open(log_dir+"\\log_"+datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S")+".txt", "w") as text_file:
+        log = log + output +"\n"
+        log = log + f"exported {container_name}" +"\n"
+    with open(log_file, "a", encoding="utf-8") as text_file:
         text_file.write(log)
+
 
 if __name__ == "__main__":
     destination = 'D:/Backup_folder/'

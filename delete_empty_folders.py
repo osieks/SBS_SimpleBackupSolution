@@ -1,7 +1,7 @@
 import os
 import datetime
 
-def delete_empty_folders(root,log_dir):
+def delete_empty_folders(root,log_file):
     log =""
     deleted = set()
     
@@ -17,9 +17,9 @@ def delete_empty_folders(root,log_dir):
             os.rmdir(current_dir)
             deleted.add(current_dir)
             
-    log = log + repr(deleted)
+    log = log + repr(deleted)+"\n"
     log=log+datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S")+"\n"
-    with open(log_dir+"\\delete_empty_folders_log_"+datetime.datetime.now().strftime("%Y-%m-%d_%H_%M_%S")+".txt", "w") as text_file:
+    with open(log_file, "a", encoding="utf-8") as text_file:
         text_file.write(log)
     
     return deleted

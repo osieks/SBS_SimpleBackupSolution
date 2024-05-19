@@ -1,9 +1,9 @@
 import subprocess
 import datetime
 
+debug = 1
 
 def backup_containers(destination,log_file):
-    debug = 1
     log = ""
     #docker import img.tar my-new-image:latest
 
@@ -26,9 +26,8 @@ def backup_containers(destination,log_file):
     with open(log_file, "a", encoding="utf-8") as text_file:
         text_file.write(log)
 
-
 if __name__ == "__main__":
     destination = 'D:/Backup_folder/'
-    log = 'D:\Backup_folder\Logs'
+    log = 'D:\Backup_folder\Logs\logi_testowe.txt'
 
     backup_containers(destination,log)
